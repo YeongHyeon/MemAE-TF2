@@ -157,8 +157,8 @@ def test(neuralnet, dataset, batch_size):
     scores_abnormal = np.asarray(scores_abnormal)
     normal_avg, normal_std = np.average(scores_normal), np.std(scores_normal)
     abnormal_avg, abnormal_std = np.average(scores_abnormal), np.std(scores_abnormal)
-    print("Noraml  avg: %.5f, std: %.5f" %(normal_avg, normal_std))
-    print("Abnoraml  avg: %.5f, std: %.5f" %(abnormal_avg, abnormal_std))
+    print("Normal  avg: %.5f, std: %.5f" %(normal_avg, normal_std))
+    print("Abnormal  avg: %.5f, std: %.5f" %(abnormal_avg, abnormal_std))
     outbound = normal_avg + (normal_std * 3)
     print("Outlier boundary of normal data: %.5f" %(outbound))
 
